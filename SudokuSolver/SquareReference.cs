@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SudokuSolver
 {
-    public class Region
+    public struct SquareReference
     {
-        public Array[SquareReference] squareRefs;
+        public int xPos;
+        public int yPos;
     }
 }

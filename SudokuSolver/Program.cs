@@ -10,6 +10,7 @@ namespace SudokuSolver
     {
         static void Main(string[] args)
         {
+            Square[] sudokuSquares = new Square[81]();
         }
     }
 }
