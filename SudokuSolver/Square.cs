@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SudokuSolver
 {
-    class Square
+    public class Square
     {
+        public int xPos;
+        public int yPos;
+        public int? value;
+        public List<int> potentialValues;
     }
 }

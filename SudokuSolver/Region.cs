@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SudokuSolver
 {
-    class Region
+    public class Region
     {
+        public List<Square> squares;
     }
 }
