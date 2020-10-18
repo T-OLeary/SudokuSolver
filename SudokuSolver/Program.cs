@@ -40,11 +40,13 @@ namespace SudokuSolver
 
             for (int i = 1; i < height + 1; i++)
             {
-                Region rg = new Region(9, Region.RegionType.Row, i);
+                int noOfSquaresInRegion = 9;
+                
+                Region rg = new Region(noOfSquaresInRegion, Region.RegionType.Row, i);
 
-                foreach (var squarerefs in rg.squareRefs)
+                for (int j = 0; j < width; j++)
                 {
-
+                    rg.squareRefs[j] = new SquareReference(j + 1, 1);
                 }
 
                 regions[i - 0] = rg;
