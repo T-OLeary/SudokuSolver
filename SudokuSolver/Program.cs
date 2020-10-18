@@ -15,13 +15,14 @@ namespace SudokuSolver
             Region[] regions = new Region[27];
             
 
-            int heigth = 9;
+            int height = 9;
             int width = 9;
+            int noOfBlocks = 9;
             int counter = 1;
 
             //Assuing a classic 9x9 sudoku, this will generate the basic 'grid'
 
-            for (int i = 1; i < (heigth + 1); i++)
+            for (int i = 1; i < (height + 1); i++)
             {
                 
                 for (int j = 1; j < (width + 1); j++)
@@ -37,17 +38,23 @@ namespace SudokuSolver
 
             //Assuming a classic 9x9 sudoku, this will assign a sudokuSquare to the appropriate region
 
-            for (int i = 1; i < (heigth + 1); i++)
+            for (int i = 1; i < height + 1; i++)
             {
                 Region rg = new Region(9, Region.RegionType.Row, i);
+                regions[i - 0] = rg;
             }
 
-            for (int i = 1; i < (width + 1); i++)
+            for (int i = 1; i < width + 1; i++)
             {
                 Region rg = new Region(9, Region.RegionType.Column, i);
+                regions[i + 8] = rg;
             }
 
-            
+            for (int i = 1; i < noOfBlocks + 1; i++)
+            {
+                Region rg = new Region(9, Region.RegionType.Block, i);
+                regions[i + 17] = rg;
+            }
 
             Console.ReadLine();
         }
