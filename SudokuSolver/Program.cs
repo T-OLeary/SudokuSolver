@@ -41,6 +41,12 @@ namespace SudokuSolver
             for (int i = 1; i < height + 1; i++)
             {
                 Region rg = new Region(9, Region.RegionType.Row, i);
+
+                foreach (var squarerefs in rg.squareRefs)
+                {
+
+                }
+
                 regions[i - 0] = rg;
             }
 
